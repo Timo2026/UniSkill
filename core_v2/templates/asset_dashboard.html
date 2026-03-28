@@ -1,0 +1,76 @@
+<!-- 数据资产看板模板 -->
+<!-- 实时显示API消耗、数据量、系统状态 -->
+
+<div class="beaver-asset-dashboard bg-gradient-to-r from-slate-800 to-slate-900 rounded-xl p-5 text-white shadow-lg overflow-hidden">
+    
+    <!-- 头部 -->
+    <div class="flex justify-between items-center mb-4 pb-2 border-b border-slate-700">
+        <div class="flex items-center gap-2">
+            <span class="text-lg">📊</span>
+            <span class="text-sm font-bold">数据资产看板</span>
+        </div>
+        <span class="text-xs text-slate-400 font-mono">{{ timestamp }}</span>
+    </div>
+    
+    <!-- 核心数据 -->
+    <div class="grid grid-cols-4 gap-4 mb-4">
+        <!-- 黄金案例 -->
+        <div class="text-center p-3 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition-colors">
+            <p class="text-2xl font-bold text-blue-400">{{ asset_stats.golden_cases }}</p>
+            <p class="text-xs text-slate-400 mt-1">黄金案例</p>
+            <p class="text-xs text-blue-500">10855条数据</p>
+        </div>
+        
+        <!-- API额度 -->
+        <div class="text-center p-3 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition-colors">
+            <p class="text-2xl font-bold {% if asset_stats.api_remaining > 50000 %}text-green-400{% elif asset_stats.api_remaining > 20000 %}text-amber-400{% else %}text-red-400{% endif %}">
+                {{ asset_stats.api_remaining }}
+            </p>
+            <p class="text-xs text-slate-400 mt-1">API额度</p>
+            <p class="text-xs text-slate-500">Coding Plan</p>
+        </div>
+        
+        <!-- 内存占用 -->
+        <div class="text-center p-3 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition-colors">
+            <p class="text-2xl font-bold {% if system_stats.mem_usage > 80 %}text-red-400{% elif system_stats.mem_usage > 60 %}text-amber-400{% else %}text-green-400{% endif %}">
+                {{ system_stats.mem_usage }}%
+            </p>
+            <p class="text-xs text-slate-400 mt-1">内存占用</p>
+            <p class="text-xs text-slate-500">{{ system_stats.cpu_count }}C</p>
+        </div>
+        
+        <!-- 向量状态 -->
+        <div class="text-center p-3 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition-colors">
+            <p class="text-2xl font-bold text-purple-400">
+                {% if asset_stats.indexed %}✓{% else %}⚡{% endif %}
+            </p>
+            <p class="text-xs text-slate-400 mt-1">向量索引</p>
+            <p class="text-xs {% if asset_stats.indexed %}text-green-500{% else %}text-amber-500{% endif %}">
+                {% if asset_stats.indexed %}已部署{% else %}待部署{% endif %}
+            </p>
+        </div>
+    </div>
+    
+    <!-- 底部标签 -->
+    <div class="flex flex-wrap gap-2 text-xs">
+        <span class="px-2 py-1 bg-blue-900/50 text-blue-300 rounded">向量库: nomic-embed-text</span>
+        <span class="px-2 py-1 bg-green-900/50 text-green-300 rounded">混合检索: 规则+向量</span>
+        <span class="px-2 py-1 bg-purple-900/50 text-purple-300 rounded">状态机: 已激活</span>
+        <span class="px-2 py-1 bg-slate-600 text-slate-300 rounded">学习闭环: 运行中</span>
+    </div>
+    
+    <!-- 进度可视化 -->
+    <div class="mt-4 h-1 bg-slate-700 rounded-full overflow-hidden">
+        <div class="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 rounded-full" style="width: 75%"></div>
+    </div>
+</div>
+
+<style>
+.beaver-asset-dashboard {
+    animation: slideIn 0.5s ease-out;
+}
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+</style>

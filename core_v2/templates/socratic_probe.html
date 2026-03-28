@@ -1,0 +1,53 @@
+<!-- 苏格拉底追问卡片模板 -->
+<!-- 深色主题，X.com风格 -->
+
+<div class="max-w-xl bg-slate-900 rounded-2xl p-6 font-sans text-white shadow-2xl overflow-hidden">
+    
+    <!-- 头部 -->
+    <div class="px-4 py-3 mb-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+            <span class="text-xs font-mono text-blue-400 tracking-tight">SOCRATIC_PROBE_V2</span>
+        </div>
+        <div class="text-xs font-mono" style="color: {{ convergence | convergence_color }}">
+            收敛度: {{ convergence_pct }}
+        </div>
+    </div>
+    
+    <!-- 消息 -->
+    <h2 class="text-lg mb-4 font-bold">{{ message }}</h2>
+    
+    <!-- 问题列表 -->
+    <div class="space-y-4">
+        {% for q in questions %}
+        <div class="group border-l-2 {% if q.importance == 'CRITICAL' %}border-blue-500{% else %}border-slate-600{% endif %} pl-4 py-2 hover:bg-slate-800/50 transition-all rounded-r">
+            <p class="text-xs font-bold uppercase tracking-widest" style="color: {{ q.color | default('#1DA1F2') }}">{{ q.dimension }}</p>
+            <p class="text-sm text-slate-300 mt-1">{{ q.question }}</p>
+            
+            {% if q.options %}
+            <div class="flex flex-wrap gap-2 mt-2">
+                {% for opt in q.options[:4] %}
+                <span class="text-xs bg-slate-700 px-3 py-1 rounded text-slate-300 hover:bg-slate-600 cursor-pointer transition-colors">
+                    {{ opt }}
+                </span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    
+    <!-- 底部 -->
+    <div class="mt-6 px-4 py-4 bg-blue-950/30 rounded-lg flex items-center justify-between">
+        <span class="text-xs text-slate-400 italic">"我思故我在" - 海狸正在探明需求...</span>
+        <button class="bg-white text-slate-900 text-sm font-bold py-2 px-4 rounded-full hover:bg-slate-200 transition-all shadow-sm">
+            确认意图并执行
+        </button>
+    </div>
+    
+    <!-- 状态快照 -->
+    <div class="mt-4 text-xs text-slate-500 font-mono">
+        <span>状态: {{ state }}</span>
+        <span class="float-right">思考逻辑: {{ socratic_logic[:50] }}...</span>
+    </div>
+</div>

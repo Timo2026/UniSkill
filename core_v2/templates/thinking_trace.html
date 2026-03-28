@@ -1,0 +1,56 @@
+<!-- 海狸思考指纹模板 -->
+<!-- 0.8s 动画，展示检索过程 -->
+
+<div class="beaver-thinking-trace p-4 bg-gradient-to-r from-blue-50 to-slate-50 rounded-lg border border-blue-100 shadow-sm" style="animation-duration: {{ duration_ms }}ms">
+    
+    <!-- 头部 -->
+    <div class="flex items-center gap-2 mb-3">
+        <div class="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+        <span class="text-sm text-slate-600 font-mono tracking-tight">🦫 海狸正在检索 10855 条黄金数据...</span>
+        <span class="text-xs text-slate-400 ml-auto">{{ timestamp }}</span>
+    </div>
+    
+    <!-- 轨迹步骤 -->
+    <div class="space-y-2">
+        <div class="flex items-center gap-2 trace-step" style="animation-delay: 100ms">
+            <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+            <span class="text-xs text-slate-500">→ 解析意图关键词</span>
+        </div>
+        <div class="flex items-center gap-2 trace-step" style="animation-delay: 200ms">
+            <div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+            <span class="text-xs text-slate-500">→ 计算收敛系数</span>
+        </div>
+        <div class="flex items-center gap-2 trace-step" style="animation-delay: 300ms">
+            <div class="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
+            <span class="text-xs text-slate-500">→ 路由模型决策</span>
+        </div>
+        <div class="flex items-center gap-2 trace-step" style="animation-delay: 400ms">
+            <div class="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+            <span class="text-xs text-slate-500">→ 检索黄金案例</span>
+        </div>
+    </div>
+    
+    <!-- 进度条 -->
+    <div class="mt-3 h-1 bg-slate-200 rounded-full overflow-hidden">
+        <div class="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse" style="width: 60%; animation-duration: {{ duration_ms }}ms"></div>
+    </div>
+</div>
+
+<style>
+.beaver-thinking-trace {
+    opacity: 0;
+    animation: fadeInUp {{ duration_ms }}ms ease-out forwards;
+}
+.trace-step {
+    opacity: 0;
+    animation: fadeIn {{ duration_ms }}ms ease-out forwards;
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+</style>

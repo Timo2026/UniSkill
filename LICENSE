@@ -1,0 +1,16 @@
+# UniSkill V2.2
+
+Universal Skill Framework - Convergence Detection + Socratic Questioning + Jinja2 Templates
+
+## Quick Start
+
+```python
+from core_v2.x_styler_v2 import XStylerV2
+
+styler = XStylerV2()
+html = styler.render_decision_card(convergence=0.85, model="qwen3.5-plus", intent="task", content="result")
+```
+
+## License
+
+MIT-0

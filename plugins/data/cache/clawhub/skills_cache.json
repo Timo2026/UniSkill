@@ -1,0 +1,47 @@
+{
+  "pdf-report-generator": {
+    "id": "pdf-report-generator",
+    "name": "PDF报告生成器",
+    "description": "生成专业的PDF报告文档",
+    "keywords": [
+      "pdf",
+      "报告",
+      "文档",
+      "生成"
+    ],
+    "author": "clawhub",
+    "version": "1.2.0",
+    "downloads": 1500,
+    "rating": 4.5
+  },
+  "data-visualizer": {
+    "id": "data-visualizer",
+    "name": "数据可视化工具",
+    "description": "将数据转换为图表和可视化报告",
+    "keywords": [
+      "数据",
+      "可视化",
+      "图表",
+      "分析"
+    ],
+    "author": "clawhub",
+    "version": "2.0.0",
+    "downloads": 2300,
+    "rating": 4.8
+  },
+  "code-formatter": {
+    "id": "code-formatter",
+    "name": "代码格式化工具",
+    "description": "自动格式化多种编程语言代码",
+    "keywords": [
+      "代码",
+      "格式化",
+      "美化",
+      "开发"
+    ],
+    "author": "clawhub",
+    "version": "1.0.0",
+    "downloads": 800,
+    "rating": 4.2
+  }
+}

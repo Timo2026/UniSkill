@@ -1,0 +1,118 @@
+<!-- X-Styler V2 "Sea-Glass" 决策卡片模板 -->
+<!-- 工业蓝 + 石墨灰配色，毛玻璃拟物设计 -->
+
+<div class="beaver-container p-6 bg-gradient-to-br from-slate-50 to-white rounded-xl shadow-xl border border-slate-200" style="max-width: 800px;">
+    
+    <!-- 头部状态栏 -->
+    <div class="flex justify-between items-center mb-4 pb-3 border-b border-slate-200">
+        <div class="flex items-center gap-2">
+            <div class="w-2 h-2 rounded-full animate-pulse {% if state == 'completed' %}bg-green-500{% elif state == 'failed' %}bg-red-500{% else %}bg-blue-500{% endif %}"></div>
+            <h3 class="text-lg font-bold text-slate-800">🦫 万能 Skill V2 执行决策</h3>
+        </div>
+        <div class="flex items-center gap-2">
+            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-md text-xs font-mono">
+                Mem: {{ system_stats.mem_usage }}%
+            </span>
+            <span class="px-2 py-1 bg-purple-100 text-purple-700 rounded-md text-xs font-mono">
+                API: {{ asset_stats.api_remaining }}
+            </span>
+        </div>
+    </div>
+    
+    {% if show_trace %}
+    <!-- 思考指纹 -->
+    <div class="beaver-thinking mb-4 p-4 bg-slate-50 rounded-lg border border-slate-100">
+        <div class="flex items-center gap-2 mb-2">
+            <span class="text-sm text-slate-600 font-mono">🧠 思考轨迹 (Logic Trace)</span>
+        </div>
+        <div class="flex gap-2">
+            <span class="badge {{ convergence_color }} px-2 py-1 rounded text-xs font-bold">
+                收敛度: {{ convergence_pct }}
+            </span>
+            <span class="badge bg-indigo-500 text-white px-2 py-1 rounded text-xs font-bold">
+                模型: {{ model_selected }}
+            </span>
+            {% if local_mode %}
+            <span class="badge bg-slate-500 text-white px-2 py-1 rounded text-xs font-bold">
+                ⚡ 本地模式
+            </span>
+            {% endif %}
+        </div>
+        <p class="mt-2 text-sm text-slate-600 italic">"{{ socratic_logic }}"</p>
+    </div>
+    {% endif %}
+    
+    {% if show_warning %}
+    <!-- 警示提示 -->
+    <div class="mb-4 p-3 bg-orange-50 rounded-lg border border-orange-200">
+        <p class="text-sm text-orange-700 font-bold">⚠️ 收敛度过低，建议补充参数后执行</p>
+    </div>
+    {% endif %}
+    
+    <!-- 三大核心指标 -->
+    <div class="grid grid-cols-3 gap-4 mb-4">
+        <!-- 执行引擎 -->
+        <div class="bg-white p-4 rounded-lg border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow">
+            <p class="text-xs text-slate-500 uppercase mb-1">执行引擎 / Router</p>
+            <p class="text-sm font-mono text-blue-600 font-bold">{{ model_selected }}</p>
+            <p class="text-xs text-slate-400 mt-1 truncate">{{ route_reason }}</p>
+        </div>
+        
+        <!-- 沙盒校验 -->
+        <div class="bg-white p-4 rounded-lg border-l-4 border-green-500 shadow-sm hover:shadow-md transition-shadow">
+            <p class="text-xs text-slate-500 uppercase mb-1">沙盒校验 / Sandbox</p>
+            <p class="text-sm font-mono {% if sandbox_status == 'passed' %}text-green-600{% elif sandbox_status == 'failed' %}text-red-600{% else %}text-slate-600{% endif %} font-bold">
+                {{ sandbox_status }}
+            </p>
+            <p class="text-xs text-slate-400 mt-1">延迟: {{ latency }}s</p>
+        </div>
+        
+        <!-- 意图收敛 -->
+        <div class="bg-white p-4 rounded-lg border-l-4 border-purple-500 shadow-sm hover:shadow-md transition-shadow">
+            <p class="text-xs text-slate-500 uppercase mb-1">意图收敛 / Align</p>
+            <div class="flex items-center gap-2">
+                <span class="px-2 py-1 {{ convergence_color }} rounded text-sm font-bold">
+                    {{ convergence_pct }}
+                </span>
+                <span class="text-xs text-slate-400">{{ convergence_indicator }}</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 主要内容 -->
+    <div class="bg-white rounded-lg p-5 mb-4 border border-slate-100">
+        <div class="prose max-w-none text-slate-800 leading-relaxed">
+            {{ content }}
+        </div>
+    </div>
+    
+    <!-- 来源标签 -->
+    <div class="flex items-center gap-2 text-xs text-slate-500 mb-4">
+        <span class="px-2 py-1 bg-slate-100 rounded">{{ intent }}</span>
+        {% if local_mode %}
+        <span class="px-2 py-1 bg-green-100 text-green-700 rounded">本地向量库</span>
+        {% else %}
+        <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded">云端检索</span>
+        {% endif %}
+        <span class="px-2 py-1 bg-purple-100 text-purple-700 rounded">Golden: {{ asset_stats.golden_cases }}条</span>
+    </div>
+    
+    <!-- 底部时间戳 -->
+    <div class="text-xs text-slate-400 border-t border-slate-100 pt-3">
+        <span>时间: {{ timestamp }}</span>
+        <span class="float-right">OpenClaw Universal Skill V2.2 - 内圣外王版</span>
+    </div>
+</div>
+
+<style>
+.beaver-container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+.beaver-thinking {
+    animation: fadeIn 0.8s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>

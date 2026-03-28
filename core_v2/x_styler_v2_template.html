@@ -1,0 +1,50 @@
+<!-- X-Styler 透明决策卡片模板 - 方案三集成版 -->
+
+<div class="x-styler-card bg-gradient-to-br from-gray-900 to-black rounded-xl p-6 shadow-2xl border border-gray-700">
+    <!-- 标题区 -->
+    <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center gap-3">
+            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+            <span class="text-sm text-gray-400">Universal Skill V2</span>
+        </div>
+        <span class="text-xs text-gray-500">{{timestamp}}</span>
+    </div>
+    
+    <!-- 三大指标区 - 补丁3：透明决策 -->
+    <div class="grid grid-cols-3 gap-3 mb-6">
+        <!-- 执行引擎/Router -->
+        <div class="bg-gray-900/80 p-3 rounded-lg border border-gray-800">
+            <p class="text-[10px] text-gray-500 uppercase">执行引擎 / Router</p>
+            <p class="text-sm font-mono text-blue-400 mt-1">{{selected_model}}</p>
+            <p class="text-[9px] text-gray-600 mt-0.5 truncate">{{route_reason}}</p>
+        </div>
+        
+        <!-- 沙盒校验/Sandbox -->
+        <div class="bg-gray-900/80 p-3 rounded-lg border border-gray-800">
+            <p class="text-[10px] text-gray-500 uppercase">沙盒校验 / Sandbox</p>
+            <p class="text-sm font-mono text-green-500 mt-1">
+                {{sandbox_status}} <span class="text-xs text-gray-600">({{latency}}s)</span>
+            </p>
+        </div>
+        
+        <!-- 意图收敛/Align -->
+        <div class="bg-gray-900/80 p-3 rounded-lg border border-gray-800">
+            <p class="text-[10px] text-gray-500 uppercase">意图收敛 / Align</p>
+            <p class="text-sm font-mono text-purple-400 mt-1">{{convergence_score}}%</p>
+        </div>
+    </div>
+    
+    <!-- 内容区 -->
+    <div class="bg-gray-800/50 rounded-lg p-4 mb-4">
+        <p class="text-sm text-gray-300 leading-relaxed">{{content}}</p>
+    </div>
+    
+    <!-- 来源标签 -->
+    <div class="flex items-center gap-2 text-xs text-gray-500">
+        <span class="px-2 py-1 bg-gray-800 rounded">{{provider}}</span>
+        <span class="px-2 py-1 bg-gray-800 rounded">{{intent}}</span>
+        {{#if local_source}}
+        <span class="px-2 py-1 bg-green-900/50 text-green-400 rounded">本地向量库</span>
+        {{/if}}
+    </div>
+</div>
