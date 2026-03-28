@@ -1,0 +1,38 @@
+{
+  "sources": {
+    "local": {
+      "enabled": true,
+      "priority": 1,
+      "description": "本地已安装的技能"
+    },
+    "clawhub": {
+      "enabled": true,
+      "priority": 2,
+      "description": "ClawHub技能市场",
+      "api_url": "https://clawhub.ai/api/skills"
+    },
+    "github": {
+      "enabled": false,
+      "priority": 3,
+      "description": "GitHub开源项目"
+    }
+  },
+  "orchestrator": {
+    "max_retries": 3,
+    "timeout": 300,
+    "parallel_limit": 4,
+    "error_handling": "continue"
+  },
+  "quality": {
+    "min_score": 0.7,
+    "auto_fix": true,
+    "strict_mode": false,
+    "checks": ["format", "content", "security", "completeness"]
+  },
+  "learning": {
+    "enabled": true,
+    "feedback_weight": 0.3,
+    "success_weight": 0.4,
+    "quality_weight": 0.3
+  }
+}

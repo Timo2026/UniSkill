@@ -1,0 +1,11 @@
+{
+  "intent:generate:skill:pdf-validator": 0.7475,
+  "intent:generate:skill:cnc-executor": 0.8000000000000003,
+  "intent:query:skill:searxng": 1.0,
+  "intent:transform:skill:self-check-before-ask": 1.0,
+  "intent:generate:skill:hybrid-model-router": 1.0,
+  "intent:analyze:skill:system-restart": 0.6350000000000001,
+  "intent:generate:skill:target-locator": 0.5900000000000001,
+  "intent:generate:skill:tutorial-generator": 0.545,
+  "intent:generate:skill:agent-browser": 0.6500000000000001
+}

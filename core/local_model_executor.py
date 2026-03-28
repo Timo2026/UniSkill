@@ -20,7 +20,7 @@ except ImportError:
 
 # DashScope Coding API配置 (OpenAI兼容模式)
 DASHSCOPE_CODING_URL = "https://coding.dashscope.aliyuncs.com/v1"
-DASHSCOPE_CODING_KEY = "sk-sp-2b89d1b9a55d4cb9a8094c9127459aab"
+DASHSCOPE_CODING_KEY = "YOUR_API_KEY_HERE"
 
 
 class LocalModelExecutor:

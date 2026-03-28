@@ -1,0 +1,122 @@
+[
+  {
+    "timestamp": "2026-03-28 02:56:44",
+    "tests_run": 2,
+    "tests_passed": 2,
+    "accuracy": 1.0,
+    "samples": [
+      {
+        "timestamp": "2026-03-28 02:56:44",
+        "task_text": "CNC加工铝合金7075，电火花处理，批量500件",
+        "expected_model": "qwen3-max",
+        "actual_model": "qwen3-max",
+        "match": true,
+        "intent": "cnc_quote"
+      },
+      {
+        "timestamp": "2026-03-28 02:56:44",
+        "task_text": "CNC加工紫铜，线切割处理，批量500件",
+        "expected_model": "qwen3-max",
+        "actual_model": "qwen3-max",
+        "match": true,
+        "intent": "cnc_quote"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-03-28 02:56:46",
+    "tests_run": 4,
+    "tests_passed": 4,
+    "accuracy": 1.0,
+    "samples": [
+      {
+        "timestamp": "2026-03-28 02:56:46",
+        "task_text": "CNC车削PEEK，精度±0.05mm，50件套",
+        "expected_model": "qwen3-max",
+        "actual_model": "qwen3-max",
+        "match": true,
+        "intent": "cnc_quote"
+      },
+      {
+        "timestamp": "2026-03-28 02:56:46",
+        "task_text": "CNC加工不锈钢316，车削处理，批量50件",
+        "expected_model": "qwen3-max",
+        "actual_model": "qwen3-max",
+        "match": true,
+        "intent": "cnc_quote"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-03-28 02:56:49",
+    "tests_run": 6,
+    "tests_passed": 6,
+    "accuracy": 1.0,
+    "samples": [
+      {
+        "timestamp": "2026-03-28 02:56:49",
+        "task_text": "铝合金7075铣削加工，抛光处理，报价单",
+        "expected_model": "qwen3-max",
+        "actual_model": "qwen3-max",
+        "match": true,
+        "intent": "cnc_quote"
+      },
+      {
+        "timestamp": "2026-03-28 02:56:49",
+        "task_text": "机械加工铝合金6061，500件件，车削工艺",
+        "expected_model": "qwen3-max",
+        "actual_model": "qwen3-max",
+        "match": true,
+        "intent": "cnc_quote"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-03-28 02:56:51",
+    "tests_run": 8,
+    "tests_passed": 8,
+    "accuracy": 1.0,
+    "samples": [
+      {
+        "timestamp": "2026-03-28 02:56:51",
+        "task_text": "机械加工ABS，100件件，钻孔工艺",
+        "expected_model": "qwen3-max",
+        "actual_model": "qwen3-max",
+        "match": true,
+        "intent": "cnc_quote"
+      },
+      {
+        "timestamp": "2026-03-28 02:56:51",
+        "task_text": "紫铜精密零件报价，公差±0.1mm，表面钝化",
+        "expected_model": "qwen3-max",
+        "actual_model": "qwen3-max",
+        "match": true,
+        "intent": "cnc_quote"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-03-28 02:56:53",
+    "tests_run": 10,
+    "tests_passed": 10,
+    "accuracy": 1.0,
+    "samples": [
+      {
+        "timestamp": "2026-03-28 02:56:53",
+        "task_text": "CNC车削铝合金7075，精度±0.1mm，500件套",
+        "expected_model": "qwen3-max",
+        "actual_model": "qwen3-max",
+        "match": true,
+        "intent": "cnc_quote"
+      },
+      {
+        "timestamp": "2026-03-28 02:56:53",
+        "task_text": "CNC加工PEEK，铣削处理，批量1000件",
+        "expected_model": "qwen3-max",
+        "actual_model": "qwen3-max",
+        "match": true,
+        "intent": "cnc_quote"
+      }
+    ]
+  }
+]

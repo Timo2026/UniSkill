@@ -66,7 +66,7 @@ class OrchestratorV2:
     实现 1 → 2/3 → 1 的完整闭环
     
     用法：
-        boss = OrchestratorV2(api_key="sk-xxx")
+        boss = OrchestratorV2(api_key="YOUR_API_KEY_HERE")
         
         # 任务执行
         result = boss.process_task(

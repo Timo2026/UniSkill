@@ -1,0 +1,92 @@
+{
+  "pdf-validator": {
+    "total_uses": 6,
+    "successes": 6,
+    "failures": 0,
+    "total_time": 0.000997781753540039,
+    "avg_time": 0.00016629695892333984,
+    "success_rate": 1.0,
+    "user_ratings": [],
+    "avg_rating": 0.0
+  },
+  "cnc-executor": {
+    "total_uses": 6,
+    "successes": 6,
+    "failures": 0,
+    "total_time": 3.162949562072754,
+    "avg_time": 0.527158260345459,
+    "success_rate": 1.0,
+    "user_ratings": [],
+    "avg_rating": 0.0
+  },
+  "searxng": {
+    "total_uses": 12,
+    "successes": 12,
+    "failures": 0,
+    "total_time": 62.62128973007202,
+    "avg_time": 5.218440810839335,
+    "success_rate": 1.0,
+    "user_ratings": [],
+    "avg_rating": 0.0
+  },
+  "self-check-before-ask": {
+    "total_uses": 20,
+    "successes": 20,
+    "failures": 0,
+    "total_time": 162.75297498703003,
+    "avg_time": 8.137648749351502,
+    "success_rate": 1.0,
+    "user_ratings": [],
+    "avg_rating": 0.0
+  },
+  "hybrid-model-router": {
+    "total_uses": 18,
+    "successes": 18,
+    "failures": 0,
+    "total_time": 1236.3467338085175,
+    "avg_time": 68.68592965602875,
+    "success_rate": 1.0,
+    "user_ratings": [],
+    "avg_rating": 0.0
+  },
+  "system-restart": {
+    "total_uses": 3,
+    "successes": 3,
+    "failures": 0,
+    "total_time": 0.00031256675720214844,
+    "avg_time": 0.00010418891906738281,
+    "success_rate": 1.0,
+    "user_ratings": [],
+    "avg_rating": 0.0
+  },
+  "target-locator": {
+    "total_uses": 2,
+    "successes": 2,
+    "failures": 0,
+    "total_time": 46.880478382110596,
+    "avg_time": 23.440239191055298,
+    "success_rate": 1.0,
+    "user_ratings": [],
+    "avg_rating": 0.0
+  },
+  "tutorial-generator": {
+    "total_uses": 1,
+    "successes": 1,
+    "failures": 0,
+    "total_time": 23.440239191055298,
+    "avg_time": 23.440239191055298,
+    "success_rate": 1.0,
+    "user_ratings": [],
+    "avg_rating": 0.0
+  },
+  "agent-browser": {
+    "total_uses": 3,
+    "successes": 3,
+    "failures": 0,
+    "total_time": 284.511812210083,
+    "avg_time": 94.83727073669434,
+    "success_rate": 1.0,
+    "user_ratings": [],
+    "avg_rating": 0.0
+  }
+}

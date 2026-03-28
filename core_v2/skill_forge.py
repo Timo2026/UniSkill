@@ -50,7 +50,7 @@ class SkillForge:
     让系统在没有现成技能时，当场手搓一个出来
     
     用法：
-        forge = SkillForge(api_key="sk-xxx")
+        forge = SkillForge(api_key="YOUR_API_KEY_HERE")
         result = forge.forge("计算钛合金铣削转速")
         
         if result.success:

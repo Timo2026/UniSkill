@@ -1,0 +1,884 @@
+[
+  {
+    "task_id": "task_20260327054427_b23cfd",
+    "timestamp": "2026-03-27T05:44:27.168179",
+    "intent": "generate",
+    "skills_used": [
+      "pdf-validator",
+      "pdf-validator",
+      "pdf-validator"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 0.00016069412231445312,
+    "quality_score": 0.825
+  },
+  {
+    "task_id": "task_20260327055032_29157e",
+    "timestamp": "2026-03-27T05:50:32.232411",
+    "intent": "analyze",
+    "skills_used": [],
+    "success": false,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 8.58306884765625e-06,
+    "quality_score": 0.45
+  },
+  {
+    "task_id": "task_20260327055522_148489",
+    "timestamp": "2026-03-27T05:55:22.716977",
+    "intent": "generate",
+    "skills_used": [],
+    "success": false,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 8.58306884765625e-06,
+    "quality_score": 0.45
+  },
+  {
+    "task_id": "task_20260327055600_063d17",
+    "timestamp": "2026-03-27T05:56:00.624914",
+    "intent": "generate",
+    "skills_used": [
+      "pdf-validator",
+      "pdf-validator",
+      "pdf-validator"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 0.00017189979553222656,
+    "quality_score": 0.825
+  },
+  {
+    "task_id": "task_20260327060534_bad146",
+    "timestamp": "2026-03-27T06:05:34.927303",
+    "intent": "generate",
+    "skills_used": [],
+    "success": false,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 8.821487426757812e-06,
+    "quality_score": 0.45
+  },
+  {
+    "task_id": "task_20260327060714_36b9f6",
+    "timestamp": "2026-03-27T06:07:14.217562",
+    "intent": "generate",
+    "skills_used": [],
+    "success": false,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 0.0023136138916015625,
+    "quality_score": 0.45
+  },
+  {
+    "task_id": "task_20260327062300_d8ac4a",
+    "timestamp": "2026-03-27T06:23:01.406263",
+    "intent": "generate",
+    "skills_used": [
+      "cnc-executor",
+      "cnc-executor",
+      "cnc-executor"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 0.4681227207183838,
+    "quality_score": 1.0
+  },
+  {
+    "task_id": "task_20260327063422_59523c",
+    "timestamp": "2026-03-27T06:34:22.428088",
+    "intent": "query",
+    "skills_used": [
+      "searxng",
+      "searxng"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 9.989738464355469e-05,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327063433_254573",
+    "timestamp": "2026-03-27T06:34:33.165824",
+    "intent": "transform",
+    "skills_used": [],
+    "success": false,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 0.00011014938354492188,
+    "quality_score": 0.45
+  },
+  {
+    "task_id": "task_20260327063514_f73738",
+    "timestamp": "2026-03-27T06:35:14.919641",
+    "intent": "transform",
+    "skills_used": [],
+    "success": false,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 6.175041198730469e-05,
+    "quality_score": 0.45
+  },
+  {
+    "task_id": "task_20260327063636_00aecd",
+    "timestamp": "2026-03-27T06:36:36.558074",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 3.9577484130859375e-05,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327063646_01c046",
+    "timestamp": "2026-03-27T06:36:46.943554",
+    "intent": "query",
+    "skills_used": [
+      "searxng",
+      "searxng"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 6.628036499023438e-05,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327063647_f52f61",
+    "timestamp": "2026-03-27T06:36:47.018530",
+    "intent": "generate",
+    "skills_used": [
+      "hybrid-model-router",
+      "hybrid-model-router",
+      "hybrid-model-router"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 8.249282836914062e-05,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327063647_7522dd",
+    "timestamp": "2026-03-27T06:36:47.094501",
+    "intent": "analyze",
+    "skills_used": [
+      "system-restart",
+      "system-restart",
+      "system-restart"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 0.00010418891906738281,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327063647_3a0329",
+    "timestamp": "2026-03-27T06:36:47.757086",
+    "intent": "generate",
+    "skills_used": [
+      "cnc-executor",
+      "cnc-executor",
+      "cnc-executor"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 0.5861937999725342,
+    "quality_score": 1.0
+  },
+  {
+    "task_id": "task_20260327070655_96f08b",
+    "timestamp": "2026-03-27T07:06:56.089729",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 0.6420137882232666,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327070750_4b8fcb",
+    "timestamp": "2026-03-27T07:08:13.741750",
+    "intent": "generate",
+    "skills_used": [
+      "target-locator",
+      "tutorial-generator",
+      "target-locator"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 23.440239191055298,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327072225_6e5b9d",
+    "timestamp": "2026-03-27T07:24:00.296041",
+    "intent": "generate",
+    "skills_used": [
+      "agent-browser",
+      "agent-browser",
+      "agent-browser"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 94.83727073669434,
+    "quality_score": 1.0
+  },
+  {
+    "task_id": "task_20260327074735_52a8aa",
+    "timestamp": "2026-03-27T07:47:41.517395",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 5.541849851608276,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327074847_b41154",
+    "timestamp": "2026-03-27T07:48:48.271565",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 0.9111185073852539,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327074923_9f9bcf",
+    "timestamp": "2026-03-27T07:49:23.626558",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 0.46623778343200684,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327075210_6c6415",
+    "timestamp": "2026-03-27T07:52:10.384735",
+    "intent": "generate",
+    "skills_used": [],
+    "success": false,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 7.677078247070312e-05,
+    "quality_score": 0.45
+  },
+  {
+    "task_id": "task_20260327075648_35cee9",
+    "timestamp": "2026-03-27T07:56:54.736082",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 6.727481842041016,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327084522_35f9a9",
+    "timestamp": "2026-03-27T08:45:22.201584",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 0.0054950714111328125,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327084740_a2c54f",
+    "timestamp": "2026-03-27T08:47:57.815682",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 17.47308874130249,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327102516_b42ee6",
+    "timestamp": "2026-03-27T10:25:24.663567",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 8.576148509979248,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327102740_5c100f",
+    "timestamp": "2026-03-27T10:27:47.277201",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 7.044891834259033,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327102905_fde53c",
+    "timestamp": "2026-03-27T10:29:10.162224",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 4.593830823898315,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327103059_04d46a",
+    "timestamp": "2026-03-27T10:31:12.277466",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 13.102633476257324,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327103112_daf975",
+    "timestamp": "2026-03-27T10:31:12.365364",
+    "intent": "generate",
+    "skills_used": [],
+    "success": false,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 0.00010085105895996094,
+    "quality_score": 0.45
+  },
+  {
+    "task_id": "task_20260327103809_e4b6ee",
+    "timestamp": "2026-03-27T10:38:09.969796",
+    "intent": "query",
+    "skills_used": [],
+    "success": false,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 8.0108642578125e-05,
+    "quality_score": 0.45
+  },
+  {
+    "task_id": "task_20260327104015_af0489",
+    "timestamp": "2026-03-27T10:40:15.303257",
+    "intent": "query",
+    "skills_used": [],
+    "success": false,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 8.225440979003906e-05,
+    "quality_score": 0.45
+  },
+  {
+    "task_id": "task_20260327104015_45c383",
+    "timestamp": "2026-03-27T10:40:21.744684",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 6.363631010055542,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327104118_c0a175",
+    "timestamp": "2026-03-27T10:41:27.783513",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 9.123659372329712,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327104127_d2e50b",
+    "timestamp": "2026-03-27T10:41:27.876281",
+    "intent": "query",
+    "skills_used": [],
+    "success": false,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 7.2479248046875e-05,
+    "quality_score": 0.45
+  },
+  {
+    "task_id": "task_20260327104145_b077bd",
+    "timestamp": "2026-03-27T10:41:45.289080",
+    "intent": "generate",
+    "skills_used": [],
+    "success": false,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 8.296966552734375e-05,
+    "quality_score": 0.45
+  },
+  {
+    "task_id": "task_20260327104210_32da4f",
+    "timestamp": "2026-03-27T10:42:10.605125",
+    "intent": "query",
+    "skills_used": [],
+    "success": false,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 0.00010824203491210938,
+    "quality_score": 0.45
+  },
+  {
+    "task_id": "task_20260327105539_59b539",
+    "timestamp": "2026-03-27T10:55:39.353154",
+    "intent": "generate",
+    "skills_used": [],
+    "success": false,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 7.987022399902344e-05,
+    "quality_score": 0.45
+  },
+  {
+    "task_id": "task_20260327110415_d3a09c",
+    "timestamp": "2026-03-27T11:04:20.532834",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 5.0364015102386475,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327110601_fa4877",
+    "timestamp": "2026-03-27T11:07:23.238300",
+    "intent": "generate",
+    "skills_used": [
+      "hybrid-model-router",
+      "hybrid-model-router",
+      "hybrid-model-router"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 82.14977478981018,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327111837_3cd7ef",
+    "timestamp": "2026-03-27T11:21:23.926880",
+    "intent": "generate",
+    "skills_used": [
+      "hybrid-model-router",
+      "hybrid-model-router",
+      "hybrid-model-router"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 165.98337960243225,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327123249_f9b9a2",
+    "timestamp": "2026-03-27T12:33:22.850680",
+    "intent": "generate",
+    "skills_used": [
+      "hybrid-model-router",
+      "hybrid-model-router",
+      "hybrid-model-router"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 33.112380504608154,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327123413_8526c4",
+    "timestamp": "2026-03-27T12:34:28.066256",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 14.8175950050354,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327123428_a7e991",
+    "timestamp": "2026-03-27T12:34:37.116195",
+    "intent": "query",
+    "skills_used": [
+      "searxng",
+      "searxng"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 8.964746713638306,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327124204_80b247",
+    "timestamp": "2026-03-27T12:42:22.966071",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 18.83965826034546,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327124323_116b52",
+    "timestamp": "2026-03-27T12:43:28.602703",
+    "intent": "query",
+    "skills_used": [
+      "searxng",
+      "searxng"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 5.463915586471558,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327124645_b90b40",
+    "timestamp": "2026-03-27T12:46:54.323711",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 9.063713550567627,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327124739_b88ed2",
+    "timestamp": "2026-03-27T12:47:46.291043",
+    "intent": "query",
+    "skills_used": [
+      "searxng",
+      "searxng"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 6.878386974334717,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327130135_a55196",
+    "timestamp": "2026-03-27T13:02:05.920584",
+    "intent": "generate",
+    "skills_used": [
+      "hybrid-model-router",
+      "hybrid-model-router",
+      "hybrid-model-router"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 30.83623456954956,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327130206_d20187",
+    "timestamp": "2026-03-27T13:02:28.796459",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 22.719003915786743,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327131257_5c1c9b",
+    "timestamp": "2026-03-27T13:13:09.306702",
+    "intent": "transform",
+    "skills_used": [
+      "self-check-before-ask"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 11.704482555389404,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327131354_16f5a3",
+    "timestamp": "2026-03-27T13:14:04.484276",
+    "intent": "query",
+    "skills_used": [
+      "searxng",
+      "searxng"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 10.003429412841797,
+    "quality_score": 0.9
+  },
+  {
+    "task_id": "task_20260327131716_de02bc",
+    "timestamp": "2026-03-27T13:18:56.278529",
+    "intent": "generate",
+    "skills_used": [
+      "hybrid-model-router",
+      "hybrid-model-router",
+      "hybrid-model-router"
+    ],
+    "success": true,
+    "user_rating": null,
+    "user_comment": null,
+    "execution_time": 100.03372597694397,
+    "quality_score": 0.9
+  },
+  {
+    "timestamp": "2026-03-27T13:31:36",
+    "intent": "translation",
+    "success": true,
+    "execution_time": 5.6456358432769775,
+    "model": "glm-5",
+    "provider": "dashscope-coding",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T13:31:58",
+    "intent": "code_gen",
+    "success": true,
+    "execution_time": 21.76375102996826,
+    "model": "qwen3.5-plus",
+    "provider": "dashscope-coding",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T13:32:03",
+    "intent": "query",
+    "success": true,
+    "execution_time": 4.229787349700928,
+    "model": "kimi-k2.5",
+    "provider": "dashscope-coding",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T13:32:14",
+    "intent": "document",
+    "success": true,
+    "execution_time": 11.097299814224243,
+    "model": "glm-5",
+    "provider": "dashscope-coding",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T13:32:40",
+    "intent": "analysis",
+    "success": true,
+    "execution_time": 26.653427839279175,
+    "model": "qwen3.5-plus",
+    "provider": "dashscope-coding",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T13:33:54",
+    "intent": "translation",
+    "success": true,
+    "execution_time": 6.1941304206848145,
+    "model": "glm-5",
+    "provider": "dashscope-coding",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T13:34:01",
+    "intent": "translation",
+    "success": true,
+    "execution_time": 6.468193531036377,
+    "model": "glm-5",
+    "provider": "dashscope-coding",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T13:34:55",
+    "intent": "code_gen",
+    "success": true,
+    "execution_time": 53.657357692718506,
+    "model": "qwen2.5:0.5b",
+    "provider": "ollama",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T13:35:11",
+    "intent": "code_gen",
+    "success": true,
+    "execution_time": 16.420676231384277,
+    "model": "qwen3.5-plus",
+    "provider": "dashscope-coding",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T13:35:17",
+    "intent": "query",
+    "success": true,
+    "execution_time": 6.016676187515259,
+    "model": "kimi-k2.5",
+    "provider": "dashscope-coding",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T13:35:40",
+    "intent": "analysis",
+    "success": true,
+    "execution_time": 22.54608726501465,
+    "model": "qwen3.5-plus",
+    "provider": "dashscope-coding",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T13:36:21",
+    "intent": "document",
+    "success": true,
+    "execution_time": 41.671337366104126,
+    "model": "qwen2.5:0.5b",
+    "provider": "ollama",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T13:36:56",
+    "intent": "document",
+    "success": true,
+    "execution_time": 34.939841747283936,
+    "model": "qwen2.5:0.5b",
+    "provider": "ollama",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T13:37:01",
+    "intent": "query",
+    "success": true,
+    "execution_time": 4.35768723487854,
+    "model": "kimi-k2.5",
+    "provider": "dashscope-coding",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T13:37:39",
+    "intent": "code_gen",
+    "success": true,
+    "execution_time": 38.29547834396362,
+    "model": "qwen2.5:0.5b",
+    "provider": "ollama",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T13:55:27",
+    "intent": "translation",
+    "success": true,
+    "execution_time": 11.53390884399414,
+    "model": "glm-5",
+    "provider": "dashscope-coding",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T13:58:04",
+    "intent": "code_gen",
+    "success": true,
+    "execution_time": 43.8102707862854,
+    "model": "qwen2.5:0.5b",
+    "provider": "ollama",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T14:12:27",
+    "intent": "code_gen",
+    "success": false,
+    "execution_time": 0,
+    "model": "unknown",
+    "provider": "unknown",
+    "error": "\u6240\u6709\u6a21\u578b\u90fd\u4e0d\u53ef\u7528"
+  },
+  {
+    "timestamp": "2026-03-27T14:23:00",
+    "intent": "document",
+    "success": true,
+    "execution_time": 84.84694528579712,
+    "model": "qwen2.5:0.5b",
+    "provider": "ollama",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T15:24:09",
+    "intent": "query",
+    "success": true,
+    "execution_time": 15.692116260528564,
+    "model": "kimi-k2.5",
+    "provider": "dashscope-coding",
+    "error": null
+  },
+  {
+    "timestamp": "2026-03-27T15:37:48",
+    "intent": "document",
+    "success": true,
+    "execution_time": 69.16549515724182,
+    "model": "qwen2.5:0.5b",
+    "provider": "ollama",
+    "error": null
+  }
+]
