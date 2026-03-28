@@ -26,7 +26,8 @@ from socratic_engine import SocraticEngine, ConvergenceLevel
 from five_w2h_filter import FiveW2HFilter
 from convergence_checker import ConvergenceChecker, ConvergenceAction
 from x_styler import XStylerRenderer
-from local_vector_retriever import LocalVectorRetriever, get_retriever
+# ⭐ 方案C：使用意图感知检索器
+from retriever_adapter import RetrieverAdapter, get_adapter
 from model_router_v2 import ModelRouter
 from introspection_trigger import trigger_introspection  # ⭐ 新增：海狸交底口令
 
@@ -53,8 +54,8 @@ class UniversalSkillV2:
         # ⭐ 新增：智能模型路由器
         self.router = ModelRouter()
         
-        # 本地向量检索（懒加载）
-        self._retriever: Optional[LocalVectorRetriever] = None
+        # ⭐ 方案C：意图感知检索器（替代旧的向量检索器）
+        self._retriever_adapter: Optional[RetrieverAdapter] = None
         
         # 执行状态
         self.status = "IDLE"
@@ -69,11 +70,11 @@ class UniversalSkillV2:
         self._ensure_data_dir()
     
     @property
-    def retriever(self) -> LocalVectorRetriever:
-        """懒加载向量检索器"""
-        if self._retriever is None:
-            self._retriever = get_retriever()
-        return self._retriever
+    def retriever_adapter(self) -> RetrieverAdapter:
+        """懒加载意图感知检索器"""
+        if self._retriever_adapter is None:
+            self._retriever_adapter = get_adapter()
+        return self._retriever_adapter
     
     def _ensure_data_dir(self):
         """确保数据目录存在"""
