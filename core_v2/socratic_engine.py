@@ -12,10 +12,15 @@
 
 import json
 import time
+import logging
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from dataclasses import dataclass, field
 from enum import Enum
+
+# 配置日志
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("SocraticEngine")
 
 
 class ConvergenceLevel(Enum):
@@ -87,6 +92,8 @@ class SocraticEngine:
     1. 禁止直接执行
     2. 必须先探明需求
     3. 收敛系数<0.8禁止启动沙盒
+    
+    V2升级: 支持检索结果注入
     """
     
     # 工业领域关键词（联动CNC报价）
@@ -109,6 +116,17 @@ class SocraticEngine:
         self.status = "IDLE"
         self.anchor_data = AnchorData()
         self.probe_history: List[Dict] = []
+        self.retrieval_context: Optional[Dict] = None  # ⭐ 新增：检索上下文
+    
+    def set_retrieval_context(self, context: Dict):
+        """
+        设置检索上下文 (第二阶段新增)
+        
+        Args:
+            context: 检索结果上下文
+        """
+        self.retrieval_context = context
+        logger.info(f"[苏格拉底] 注入检索上下文: {context.get('intent', 'unknown')}")
         
     def start_engine(self, user_input: str) -> Dict:
         """
@@ -195,14 +213,25 @@ class SocraticEngine:
         intent: str,
         needs_industrial: bool
     ) -> List[SocraticQuestion]:
-        """生成5W2H提问"""
+        """生成5W2H提问 (第二阶段: 支持检索上下文)"""
         questions = []
+        
+        # ⭐ 检索上下文增强
+        retrieval_hints = []
+        if self.retrieval_context and self.retrieval_context.get('top_results'):
+            top = self.retrieval_context['top_results'][0]
+            retrieval_hints = self._extract_hints_from_retrieval(top, intent)
         
         # What: 核心对象（必问）
         if intent in ["cnc_quote", "document_gen", "code_gen"]:
+            # ⭐ 使用检索提示优化问题
+            what_question = self._generate_what_question(intent, text)
+            if retrieval_hints:
+                what_question += f" (参考案例提示: {', '.join(retrieval_hints[:2])})"
+            
             questions.append(SocraticQuestion(
                 dimension="what",
-                question=self._generate_what_question(intent, text),
+                question=what_question,
                 options=self._get_what_options(intent),
                 importance="CRITICAL"
             ))
@@ -242,6 +271,30 @@ class SocraticEngine:
             ))
         
         return questions
+    
+    def _extract_hints_from_retrieval(self, result: Dict, intent: str) -> List[str]:
+        """从检索结果提取提示"""
+        hints = []
+        text = result.get('text', '')
+        
+        if intent == "cnc_quote":
+            # 提取材料关键词
+            materials = ["铝合金", "不锈钢", "6061", "304", "钛合金", "铜"]
+            for m in materials:
+                if m in text:
+                    hints.append(m)
+            
+            # 提取精度关键词
+            if "公差" in text or "精度" in text:
+                hints.append("精度要求")
+        
+        elif intent == "code_gen":
+            langs = ["Python", "JavaScript", "Java", "SQL", "Shell"]
+            for lang in langs:
+                if lang in text:
+                    hints.append(lang)
+        
+        return hints[:3]
     
     def _generate_what_question(self, intent: str, text: str) -> str:
         """生成What提问"""

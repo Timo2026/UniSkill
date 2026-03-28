@@ -28,6 +28,8 @@ from convergence_checker import ConvergenceChecker, ConvergenceAction
 from x_styler import XStylerRenderer
 # ⭐ 方案C：使用意图感知检索器
 from retriever_adapter import RetrieverAdapter, get_adapter
+# ⭐ 第二阶段：检索注入器
+from retrieval_injector import RetrievalInjector, create_injector
 from model_router_v2 import ModelRouter
 from introspection_trigger import trigger_introspection  # ⭐ 新增：海狸交底口令
 
@@ -57,6 +59,9 @@ class UniversalSkillV2:
         # ⭐ 方案C：意图感知检索器（替代旧的向量检索器）
         self._retriever_adapter: Optional[RetrieverAdapter] = None
         
+        # ⭐ 第二阶段：检索注入器
+        self._injector: Optional[RetrievalInjector] = None
+        
         # 执行状态
         self.status = "IDLE"
         self.anchor_data: Dict = {}
@@ -75,6 +80,13 @@ class UniversalSkillV2:
         if self._retriever_adapter is None:
             self._retriever_adapter = get_adapter()
         return self._retriever_adapter
+    
+    @property
+    def injector(self) -> RetrievalInjector:
+        """懒加载检索注入器 (第二阶段新增)"""
+        if self._injector is None:
+            self._injector = create_injector()
+        return self._injector
     
     def _ensure_data_dir(self):
         """确保数据目录存在"""
